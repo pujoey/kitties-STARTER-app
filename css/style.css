@@ -1,0 +1,49 @@
+/*@import a Google Font here!*/
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body {
+  background: url('/images/background.png');
+  text-align: center;
+  width: 100%
+  font-family: Pacifico, cursive;
+  border-radius 25px;
+}
+
+
+
+#container {
+  margin-left: 50px;
+}
+
+.dashed {
+  border: 2px dashed pink;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.left-container, .right-container {
+  border: 2px solid #add8e6;
+  background-color: white;
+  float: left;
+  width: 440px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+}
+
+h1 {
+  font-family: Pacifico, cursive;
+  -webkit-text-stroke: .03px #000;
+  color: white;
+  text-shadow: 3px 3px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black, -1px -1px 0 black;
+}
+
+h2, p {
+  font-family: Pacifico, cursive;
+}

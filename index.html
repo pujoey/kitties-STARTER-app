@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html ng-app="CatApp">
+	<head>
+
+		<title>Kitties App!</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body ng-controller="CatsController as vm">
+			<form class="form-control">
+			  <input ng-model="vm.newCat.catName" type="text" placeholder='Cat Name'>
+			  <input ng-model="vm.newCat.monthsOld" type="number" placeholder='Months Old'>
+			  <input ng-model="vm.newCat.gender" type="text" placeholder='Gender'>
+			  <input ng-model="vm.newCat.image" type="text" placeholder='Image'>
+			  <button type="button" ng-click="vm.addNewCat()">Add New Cat</button>
+			  <br>
+			</form>
+		<div id="container">
+
+			<div class="left-container">
+				<h1>Kitties for Adoption</h1>
+				<div class="dashed" ng-repeat="cat in vm.allCats" ng-if='!cat.adopted'>
+						<h2><strong>My name is {{ cat.catName }}</strong></h2>
+						<p>I am {{ cat.monthsOld }} months old.</p>
+						<p>I am a {{ cat.gender }}.</p>
+						<img src="{{ cat.image }}" alt="">
+						<br>
+						<input ng-click="cat.adopted = !cat.adopted" type="checkbox" name="vehicle1" value="Bike"> Adopt?<br>
+						<br>
+						<button type="button" ng-click="vm.remove(cat)">Delete {{ cat.catName }}</button>					<br>
+						<br>
+				</div>
+				<br>
+			</div>
+
+			<div class="right-container">
+				<h1>At their forever homes <3</h1>
+				<div class="dashed" ng-repeat="cat in vm.allCats" ng-if='cat.adopted'>
+						<h2><strong>My name is {{ cat.catName }}</strong></h2>
+						<p>I am {{ cat.monthsOld }} months old.</p>
+						<p>I am a {{ cat.gender }}.</p>
+						<img src="{{ cat.image }}" alt="">
+						<br>
+						<input ng-click="cat.adopted = !cat.adopted" type="checkbox" checked> Adopt?<br>
+						<br>
+						<button ng-click="vm.remove(cat)" type="button" onclick="alert('Send the cat to a farm ')">Delete {{ cat.catName }}</button>					<br>
+						<br>
+				</div>
+
+			</div>
+		</div>
+
+	  <!--Sourcing Angular-->
+	  <script src="/js/angular.min.js"></script>
+		<!-- Source in module -->
+	  <script src="/js/main.js"></script>
+		<!-- Source in controller -->
+	  <script src="/js/KittiesController.js"></script>
+	</body>
+</html>
