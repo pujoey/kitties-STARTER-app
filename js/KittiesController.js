@@ -66,6 +66,7 @@
 					image: vm.newCat.image,
 					adopted: vm.newCat.adopted
       });
+      alert('you added a new cat!');
     };
 
   }
