@@ -19,8 +19,6 @@
     					adopted: false
     };
 
-
-
 		vm.allCats = [
 				{
 					catName: 'Karl',
@@ -53,15 +51,12 @@
 
 			]; //all cats
 
-		// filter iterate through each element and remove false expression
+	// filter iterate through each element and remove false expression
     function remove(removeCat) {
       vm.allCats = vm.allCats.filter(function(cat) {
         return cat.catName != removeCat.catName;
       });
     };
-
-
-
 
     function addNewCat() {
       vm.allCats.push({
@@ -73,31 +68,6 @@
       });
     };
 
-
-
-  //   vm.addHint             = addHint;
-  //   vm.ids                 = 4;
-  //   vm.newHint             = {id: 0, wisdom: '', incorporated: false};
-  //   vm.numberToIncorporate = numberToIncorporate;
-
-  //   function numberToIncorporate() {
-  //     return vm.allHints.filter(function (hint) {
-  //       return !hint.incorporated;
-  //     }).length;
-
-  //   }
-
-
-
-  //   function addHint() {
-  //     vm.allHints.push({
-  //       id:           vm.ids,
-  //       wisdom:       vm.newHint.wisdom,
-  //       incorporated: false
-  //     });
-  //     vm.ids++;
-  //     vm.newHint.wisdom = '';
-  //   }
   }
 })();
 
