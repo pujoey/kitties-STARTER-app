@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
 body {
-  background: url('images/background.png');
+  background: url('./images/background.png');
   text-align: center;
   width: 100%
   font-family: Pacifico, cursive;
